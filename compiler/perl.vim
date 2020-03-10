@@ -27,7 +27,7 @@ else
 	let s:taintopt = ''
 endif
 
-exe 'CompilerSet makeprg=carton\ exec\ --\ perl\ -' . s:warnopt . s:taintopt . 'c\ %:S'
+exe 'CompilerSet makeprg=carton\ exec\ --\ perl\ -Ilib -' . s:warnopt . s:taintopt . 'c\ %:S'
 
 CompilerSet errorformat=
 	\%-G%.%#had\ compilation\ errors.,
